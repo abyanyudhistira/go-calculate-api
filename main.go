@@ -13,7 +13,7 @@ type Response struct {
 	Error  string  `json:"error,omitempty"`
 }
 
-// parseAB reads a and b from query; on failure writes 400 JSON and returns ok=false
+// addHandler calculates
 func parseAB(w http.ResponseWriter, r *http.Request) (a, b float64, ok bool) {
 	w.Header().Set("Content-Type", "application/json")
 	astring := r.URL.Query().Get("a")
